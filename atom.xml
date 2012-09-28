@@ -4,7 +4,7 @@
   <title><![CDATA[Blog]]></title>
   <link href="http://skaphy.github.com/atom.xml" rel="self"/>
   <link href="http://skaphy.github.com/"/>
-  <updated>2012-09-28T13:44:15+09:00</updated>
+  <updated>2012-09-28T13:48:41+09:00</updated>
   <id>http://skaphy.github.com/</id>
   <author>
     <name><![CDATA[skaphy]]></name>
@@ -12,5 +12,14 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[テスト]]></title>
+    <link href="http://skaphy.github.com/blog/2012/09/28/tesuto/"/>
+    <updated>2012-09-28T13:46:00+09:00</updated>
+    <id>http://skaphy.github.com/blog/2012/09/28/tesuto</id>
+    <content type="html"><![CDATA[<p>テスト</p>
+]]></content>
+  </entry>
   
 </feed>
