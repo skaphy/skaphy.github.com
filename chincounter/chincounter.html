@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Chincounter</title>
+		<link rel="stylesheet" type="text/css" href="./css/bootstrap.min.css">
+		<style>
+			@media (min-width: 980px) {
+				body {
+					padding-top: 60px;
+					padding-bottom: 42px;
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<div class="navbar navbar-inverse navbar-fixed-top">
+			<div class="navbar-inner">
+				<div class="container">
+					<a class="brand" href="#">chincounter</a>
+					<ul class="nav">
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div class="container">
+			<div class="row" id="mainform">
+				<div class="span12">
+					<form onsubmit="return false;">
+						<fieldset>
+							<legend>1. tweets.csv</legend>
+							<p>tweets.zipの中にあるtweets.csvを指定してください</p>
+							<input type="file" id="tweetszip">
+						</fieldset>
+						<!--
+						<fieldset>
+							<legend>2. 集計対象</legend>
+							(あとで書く)
+						</fieldset>
+						-->
+						<fieldset>
+							<legend>2. 実行</legend>
+							<button id="tweetszipbtn">実行</button>
+						</fieldset>
+					</form>
+				</div>
+			</div>
+			<div class="row" id="result" style="display:none;">
+				<div class="span12">
+				</div>
+			</div>
+		</div>
+
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+		<script src="./CSVData.js"></script>
+		<script src="./js/bootstrap.min.js"></script>
+		<script src="./chincounter.js"></script>
+	</body>
+</html>
