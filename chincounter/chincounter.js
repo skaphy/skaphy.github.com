@@ -25,14 +25,32 @@ $("#tweetszipbtn").click(function() {
 				result[datestr]++;
 			}
 		});
-		var html = "<table class=\"table\">";
+		var html = "<div class=\"span5\" style=\"height:200px;overflow:auto;\"><table class=\"table\">";
 		$.each(result, function(key, value) {
 			html += "<tr>";
 			html += "<td>" + key + "</td><td>" + value + "回</td>";
 			html += "</tr>";
 		});
-		html += "<table>";
+		html += "</table></div>";
+		html += "<div class=\"span7\" style=\"height:200px;overflow:auto;\">";
+		html += "<div id=\"graphChincount\" style=\"width:100%;height:200px;\"></div>";
+		html += "</div>";
 		$("#result").html(html);
+
+		var data = [];
+		$.each(result, function(key, value) {
+			data.push({month:key, count:value});
+		});
+		var chart = new AmCharts.AmSerialChart();
+		chart.dataProvider = data.reverse();
+		chart.categoryField = "month";
+		var graph = new AmCharts.AmGraph();
+		graph.valueField = "count";
+		graph.type = "line";
+		graph.bullet = "round";
+		graph.balloonText = "[[category]]: [[value]]";
+		chart.addGraph(graph);
+		chart.write("graphChincount");
 	};
 	reader.readAsText(file);
 	$("#mainform").hide();
